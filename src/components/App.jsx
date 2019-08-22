@@ -7,7 +7,7 @@ import {
 } from 'blockstack';
 import { Switch, Route } from 'react-router-dom'
 
-const appConfig = new AppConfig(['store_write', 'publish_data'])
+const appConfig = new AppConfig(['store_write', 'publish_data'], window.location.origin, "", "/manifest.json", null, DEFAULT_BLOCKSTACK_HOST)
 const userSession = new UserSession({ appConfig: appConfig })
 
 export default class App extends Component {
